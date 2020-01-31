@@ -1,18 +1,20 @@
 import React from "react";
-import Header from "./components/Header.js";
-import { Route } from "react-router-dom";
-
-import WelcomePage from "./components/WelcomePage";
-import CharacterList from "./components/CharacterList";
-import LocationList from "./components/LocationsList";
+import AppRouter from "./components/AppRouter";
+import Header from "./components/Header";
 
 export default function App() {
   return (
-    <main>
+    <div className="App">
+      <header>
+        <h1>Welcome to the ultimate fan site!</h1>
+        <img
+          className="main-img"
+          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          alt="rick"
+        />
+      </header>
       <Header />
-      <Route exact path="/" component={WelcomePage} />
-      <Route exact path="/characters" component={CharacterList} />
-      <Route exact path="/locations" component={LocationList} />
-    </main>
+      <AppRouter />
+    </div>
   );
 }

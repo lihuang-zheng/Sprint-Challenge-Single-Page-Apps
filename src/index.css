@@ -37,3 +37,11 @@ main {
 header h1 {
   text-align: center;
 }
+
+location-list {
+  margin: 10px;
+}
+
+character-list {
+  margin: 10px;
+}
