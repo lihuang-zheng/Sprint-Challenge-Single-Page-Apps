@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Character from "./Character";
 import Locations from "./Locations";
+import WelcomePage from "./WelcomePage";
+
 function AppRouter() {
   return (
     <Router>
@@ -9,7 +11,10 @@ function AppRouter() {
         <nav className="main-nav">
           <ul>
             <li>
-              <Link to="/">Character</Link>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/characters">Character</Link>
             </li>
             <li>
               <Link to="/locations">Locations</Link>
@@ -18,7 +23,8 @@ function AppRouter() {
         </nav>
         <Switch>
           <Route path="/locations" component={Locations} />
-          <Route path="/" component={Character} />
+          <Route path="/characters" component={Character} />
+          <Route path="/" component={WelcomePage} />
         </Switch>
       </div>
     </Router>
